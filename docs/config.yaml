@@ -1,0 +1,8 @@
+baseURL: /
+languageCode: en-us
+title: "APIzation: Replication Package"
+theme: anubis
+
+params:
+  customCss:
+    - custom.css
