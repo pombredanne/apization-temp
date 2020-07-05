@@ -6,3 +6,8 @@ theme: anubis
 params:
   customCss:
     - custom.css
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
