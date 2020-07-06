@@ -3,7 +3,19 @@ languageCode: en-us
 title: "APIzation: Replication Package"
 theme: anubis
 
+menu:
+  main:
+    - identifier: apizations
+      name: Study on APIzations
+      url: /apizations/
+      weight: 1
+    - identifier: evaluation
+      name: Evaluation of the approach
+      url: /evaluation/
+      weight: 2
+
 params:
+  author: "Pasquale Salza"
   customCss:
     - custom.css
 

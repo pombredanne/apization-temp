@@ -2,6 +2,8 @@
 title: "Homepage"
 ---
 
+# Homepage
+
 This documentation refers to the replication package for the paper *APIzation: Generating Reusable APIs from StackOverflow Code Snippets*.
 It includes the scripts and data we used in our study.
 
@@ -14,7 +16,7 @@ The documentation is organized as follows:
 ## License
 
 This replication package is licensed under the terms of the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
-Please see the [LICENSE](LICENSE) file for full details.
+Please see the [license page](license) for full details.
 
 ## Credits
 
