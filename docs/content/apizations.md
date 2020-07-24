@@ -2,7 +2,7 @@
 title: "Study on APIzations"
 ---
 
-This section contains all the data and scripts we used to conduct our investigatory study to understand how developers perform *APIzations*.
+This section contains all the data we used to conduct our investigatory study to understand how developers perform *APIzations*.
 
 We collected examples of manual *APIzations* by mining both *GitHub* and *StackOverflow*.
 These examples represent such cases in which developers grabbed the snippets from *StackOverflow* and adapted to their own codebase, published in a public repository on *GitHub*.
