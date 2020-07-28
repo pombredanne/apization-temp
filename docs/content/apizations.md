@@ -10,20 +10,22 @@ We only mined those examples on *GitHub* for which an explicit link to a *StackO
 
 The insights gained from this study led to four common *APIzation* patterns that establish the foundations of our proposed technique.
 
-[gh_files.json.gz]: /data/gh_files.json.gz
-[gh_files_cleaned.json.gz]: /data/gh_files_cleaned.json.gz
-[question_ids.csv]: /data/question_ids.csv
-[answer_ids.csv]: /data/answer_ids.csv
-[so_answers.csv.gz]: /data/so_answers.csv.gz
-[so_answers_to_questions.csv.gz]: /data/so_answers_to_questions.csv.gz
-[ghso_files_answers.json.gz]: /data/ghso_files_answers.json.gz
-[sogh_pairs_clones.json.gz]: /data/sogh_pairs_clones.json.gz
-[sogh_pairs_clones_files.tar.gz]: /data/sogh_pairs_clones_files.tar.gz
-[sogh_pairs_clones_diffs.tar.gz]: /data/sogh_pairs_clones_diffs.tar.gz
-[sogh_pairs_diffs_apizations.tar.gz]: /data/sogh_pairs_diffs_apizations.tar.gz
-[sogh_pairs_diffs_different_semantic.tar.gz]: /data/sogh_pairs_diffs_different_semantic.tar.gz
-[sogh_pairs_diffs_tests.tar.gz]: /data/sogh_pairs_diffs_tests.tar.gz
-[sogh_pairs_diffs_false_positives.tar.gz]: /data/sogh_pairs_diffs_false_positives.tar.gz
+[gh_files.json.gz]: /data/apizations/gh_files.json.gz
+[gh_files_cleaned.json.gz]: /data/apizations/gh_files_cleaned.json.gz
+[question_ids.csv]: /data/apizations/question_ids.csv
+[answer_ids.csv]: /data/apizations/answer_ids.csv
+[so_answers.csv.gz]: /data/apizations/so_answers.csv.gz
+[so_answers_to_questions.csv.gz]: /data/apizations/so_answers_to_questions.csv.gz
+[ghso_files_answers.json.gz]: /data/apizations/ghso_files_answers.json.gz
+[sogh_pairs_clones.json.gz]: /data/apizations/sogh_pairs_clones.json.gz
+[sogh_pairs_clones_files.tar.gz]: /data/apizations/sogh_pairs_clones_files.tar.gz
+[sogh_pairs_clones_diffs.tar.gz]: /data/apizations/sogh_pairs_clones_diffs.tar.gz
+[sogh_pairs_diffs_apizations.tar.gz]: /data/apizations/sogh_pairs_diffs_apizations.tar.gz
+[sogh_pairs_diffs_different_semantic.tar.gz]: /data/apizations/sogh_pairs_diffs_different_semantic.tar.gz
+[sogh_pairs_diffs_tests.tar.gz]: /data/apizations/sogh_pairs_diffs_tests.tar.gz
+[sogh_pairs_diffs_false_positives.tar.gz]: /data/apizations/sogh_pairs_diffs_false_positives.tar.gz
+[parameters_patterns_analysis.csv]: /data/apizations/parameters_patterns_analysis.csv
+[return_patterns_analysis.csv]: /data/apizations/return_patterns_analysis.csv
 
 ## Process
 
@@ -38,11 +40,12 @@ Step | Description | Files | Questions | Answers | Methods | Snippets | Pairs | 
 [5](#5) | Combine *GitHub* files and *StackOverflow* answers | `27,940` | `13,300` | `63,123` | – | – | – | [`ghso_files_answers.json.gz`][ghso_files_answers.json.gz]
 [6](#6) | *Type 3* clone detection | `330` | – | `199` | `330` | `199` | `330` | [`sogh_pairs_clones.json.gz`][sogh_pairs_clones.json.gz]
 [7](#7) | Data preparation for manual evaluation | – | – | – | – | – | – | [`sogh_pairs_clones_files.tar.gz`][sogh_pairs_clones_files.tar.gz] <br /> [`sogh_pairs_clones_diffs.tar.gz`][sogh_pairs_clones_diffs.tar.gz]
-[8](#8) | Manual check | – | – | – | 𐄂 | 𐄂 | `135` | [`sogh_pairs_diffs_apizations.tar.gz`][sogh_pairs_diffs_apizations.tar.gz] <br /> [`sogh_pairs_diffs_different_semantic.tar.gz`][sogh_pairs_diffs_different_semantic.tar.gz] <br /> [`sogh_pairs_diffs_tests.tar.gz`][sogh_pairs_diffs_tests.tar.gz] <br /> [`sogh_pairs_diffs_false_positives.tar.gz`][sogh_pairs_diffs_false_positives.tar.gz]
+[8](#8) | Manual check | – | – | – | `135` | `85` | `135` | [`sogh_pairs_diffs_apizations.tar.gz`][sogh_pairs_diffs_apizations.tar.gz] <br /> [`sogh_pairs_diffs_different_semantic.tar.gz`][sogh_pairs_diffs_different_semantic.tar.gz] <br /> [`sogh_pairs_diffs_tests.tar.gz`][sogh_pairs_diffs_tests.tar.gz] <br /> [`sogh_pairs_diffs_false_positives.tar.gz`][sogh_pairs_diffs_false_positives.tar.gz]
+[9](#9) | Patterns identification | – | – | – | – | – | `135` | 
 
 ### 1. *GitHub* archive {#1}
 
-We start from the GitHub archive on [Google BigQuery](https://cloud.google.com/bigquery) with the dump of `May, 2019`.
+We start from the *GitHub* archive on [Google BigQuery](https://cloud.google.com/bigquery) with the dump of `May, 2019`.
 
 ### 2. Filter *Java* files with an explicit link to *StackOverflow* {#2}
 
@@ -109,3 +112,21 @@ We manually evaluated and classified all the pairs:
 * [`sogh_pairs_diffs_different_semantic.tar.gz`][sogh_pairs_diffs_different_semantic.tar.gz], the pairs where the *StackOverflow* snippets were included into more complex methods
 * [`sogh_pairs_diffs_tests.tar.gz`][sogh_pairs_diffs_tests.tar.gz], not valid pairs because they are test cases
 * [`sogh_pairs_diffs_false_positives.tar.gz`][sogh_pairs_diffs_false_positives.tar.gz], not valid examples of reuse
+
+### 9. Patterns identification {#9}
+
+As final step in our study, we analyzed the content of the *APIzations* to identify possible patterns.
+In particular, we analyzed how the developers applied the *APIzation* operations for all the variables in the snippets.
+We provide the results of such manual analysis in the files [`parameters_patterns_analysis.csv`][parameter_patterns_analysis.csv] and [`return_patterns_analysis.csv`][return_patterns_analysis.csv], for the parameter and return statements transformations, respectively.
+
+The pattern classification is described in the following table.
+
+Pattern | Type | Description
+--- | --- | ---
+*notdecl* | Parameter | The developer created a parameter from a variable that is only used, but not declared, in the code snippet.
+*const* | Parameter | The developer transformed a variable with a hard-coded assignment to a parameter.
+*none* | Parameter | The developer did not convert the variable to a parameter.
+*latest* | Return | The developer derived the return statement as the last assignment to a variable in the snippet.
+*syso* | Return | The developer transformed a print to the system output to the return statement.
+*already* | Return | The return statement is already declared in the snippet and was not changed by the developer.
+*none* | Return | There are no return statements in the resulting API.
