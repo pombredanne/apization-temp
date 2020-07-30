@@ -41,7 +41,7 @@ Step | Description | Files | Questions | Answers | Methods | Snippets | Pairs | 
 [6](#6) | *Type 3* clone detection | `330` | – | `199` | `330` | `199` | `330` | [`sogh_pairs_clones.json.xz`][sogh_pairs_clones.json.xz]
 [7](#7) | Data preparation for manual evaluation | – | – | – | – | – | – | [`sogh_pairs_clones_files.tar.xz`][sogh_pairs_clones_files.tar.xz] <br /> [`sogh_pairs_clones_diffs.tar.xz`][sogh_pairs_clones_diffs.tar.xz]
 [8](#8) | Manual check | – | – | – | `135` | `85` | `135` | [`sogh_pairs_diffs_apizations.tar.xz`][sogh_pairs_diffs_apizations.tar.xz] <br /> [`sogh_pairs_diffs_different_semantic.tar.xz`][sogh_pairs_diffs_different_semantic.tar.xz] <br /> [`sogh_pairs_diffs_tests.tar.xz`][sogh_pairs_diffs_tests.tar.xz] <br /> [`sogh_pairs_diffs_false_positives.tar.xz`][sogh_pairs_diffs_false_positives.tar.xz]
-[9](#9) | Patterns identification | – | – | – | – | – | `135` | 
+[9](#9) | Patterns identification | – | – | – | – | – | `135` | [`parameters_patterns_analysis.csv`][parameters_patterns_analysis.csv] <br /> [`return_patterns_analysis.csv`][return_patterns_analysis.csv]
 
 ### 1. *GitHub* archive {#1}
 
@@ -118,7 +118,7 @@ We manually evaluated and classified all the pairs:
 As the final step in our study, we analyzed the content of the *APIzations* to identify possible patterns.
 First, we analyzed how the developers applied the *APIzation* operations for all the variables in the snippets.
 Second, we studied how they produced a return statement starting from the snippet.
-We provide the results of such manual analysis in the files [`parameters_patterns_analysis.csv`][parameter_patterns_analysis.csv] and [`return_patterns_analysis.csv`][return_patterns_analysis.csv], for the parameter and return statements transformations, respectively.
+We provide the results of such manual analysis in the files [`parameters_patterns_analysis.csv`][parameters_patterns_analysis.csv] and [`return_patterns_analysis.csv`][return_patterns_analysis.csv], for the parameter and return statements transformations, respectively.
 We were able to extract the common patterns then used in our automated approach called *APIzator*.
 In the provided file, we specify the pattern in the column `applied_pattern`.
 
