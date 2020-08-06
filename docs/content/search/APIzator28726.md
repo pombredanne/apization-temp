@@ -1,5 +1,5 @@
 ---
-title: '[Q–28428][A–28726] How do I get the path where the user installed my Java application?'
+title: '[Q#28428][A#28726] How do I get the path where the user installed my Java application?'
 ---
 
 https://stackoverflow.com/q/28428

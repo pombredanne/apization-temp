@@ -1,3 +1,24 @@
 .container {
     max-width: 85%;
 }
+
+.search-box {
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.search-logo {
+    max-width: 30em;
+}
+
+.search-input {
+    margin-top: 1em;
+    font-family: inherit;
+    width: 30em;
+    padding: 0.5em 0.75em;
+    font-size: 1.2em;
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+}

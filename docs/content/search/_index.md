@@ -1,10 +1,10 @@
 ---
 title: Search
-cascade:
-    outputs:
-    - html
-    - json
+outputs:
+- html
+- json
 ---
 
 # Search
 
+This is an example site.

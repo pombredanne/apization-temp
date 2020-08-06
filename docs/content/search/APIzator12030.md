@@ -1,5 +1,5 @@
 ---
-title: '[Q–11930][A–12030] How can I determine the IP of my router/gateway in Java?'
+title: '[Q#11930][A#12030] How can I determine the IP of my router/gateway in Java?'
 ---
 
 https://stackoverflow.com/q/11930

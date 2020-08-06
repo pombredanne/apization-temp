@@ -1,5 +1,5 @@
 ---
-title: '[Q–29324][A–29334] How do I create a hash table in Java?'
+title: '[Q#29324][A#29334] How do I create a hash table in Java?'
 ---
 
 https://stackoverflow.com/q/29324
