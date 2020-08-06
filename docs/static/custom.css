@@ -9,16 +9,26 @@
 }
 
 .search-logo {
-    max-width: 30em;
+    width: 30em;
 }
 
 .search-input {
     margin-top: 1em;
     font-family: inherit;
-    width: 30em;
+    width: 40em;
     padding: 0.5em 0.75em;
     font-size: 1.2em;
     -webkit-appearance: textfield;
     -moz-box-sizing: content-box;
     -webkit-box-sizing: content-box;
+}
+
+@media (max-width: 840px) {
+    .search-logo {
+        width: 80%;
+    }
+    
+    .search-input {
+        width: 90%;
+    }
 }
