@@ -1,10 +1,10 @@
 [
-    {{- range $index, $element := .Site.RegularPages -}}
+    {{- range $index, $element := where site.RegularPages "Type" "in" site.Params.mainSections -}}
     {{ if $index }},{{ end }}
     {    
         "title": "{{ .Title }}",
         "url": "{{ .RelPermalink }}",
-        "body": {{ .Plain | jsonify }},
+        "body": {{ .Plain | jsonify }}
     }
     {{- end }}
 ]

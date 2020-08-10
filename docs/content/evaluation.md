@@ -1,5 +1,5 @@
 ---
-title: "Evaluation of the approach (APIzator)"
+title: 📝 Evaluation of the approach (APIzator)
 ---
 
 This section contains all the data we used to evaluate our approach called *APIzator*.

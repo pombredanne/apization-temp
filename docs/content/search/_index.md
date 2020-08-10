@@ -1,10 +1,9 @@
 ---
-title: Search
+title: 🔍 Search
 outputs:
 - html
 - json
 ---
 
-# Search
-
-This is an example site.
+<!-- You can use our search engine to look for an *APIzation*.
+Just type some terms in the following input box! -->

@@ -1,5 +1,5 @@
 ---
-title: "Study on APIzations"
+title: 📊 Study on APIzations
 ---
 
 This section contains all the data we used to conduct our investigatory study to understand how developers perform *APIzations*.
@@ -31,6 +31,8 @@ The insights gained from this study led to four common *APIzation* patterns that
 
 The following table shows the steps of our processing method to collect the data for the study.
 
+<div class="table-wrapper">
+
 Step | Description | Files | Questions | Answers | Methods | Snippets | Pairs | Data
 ---: | --- | --- | --- | --- | --- | --- | --- | ---
 [1](#1) | *GitHub* archive | `~1,000,000` | – | – | – | – | – | –
@@ -42,6 +44,8 @@ Step | Description | Files | Questions | Answers | Methods | Snippets | Pairs | 
 [7](#7) | Data preparation for manual evaluation | – | – | – | – | – | – | [`sogh_pairs_clones_files.tar.xz`][sogh_pairs_clones_files.tar.xz] <br /> [`sogh_pairs_clones_diffs.tar.xz`][sogh_pairs_clones_diffs.tar.xz]
 [8](#8) | Manual check | – | – | – | `135` | `85` | `135` | [`sogh_pairs_diffs_apizations.tar.xz`][sogh_pairs_diffs_apizations.tar.xz] <br /> [`sogh_pairs_diffs_different_semantic.tar.xz`][sogh_pairs_diffs_different_semantic.tar.xz] <br /> [`sogh_pairs_diffs_tests.tar.xz`][sogh_pairs_diffs_tests.tar.xz] <br /> [`sogh_pairs_diffs_false_positives.tar.xz`][sogh_pairs_diffs_false_positives.tar.xz]
 [9](#9) | Patterns identification | – | – | – | – | – | `135` | [`parameters_patterns_analysis.csv`][parameters_patterns_analysis.csv] <br /> [`return_patterns_analysis.csv`][return_patterns_analysis.csv]
+
+</div>
 
 ### 1. *GitHub* archive {#1}
 
