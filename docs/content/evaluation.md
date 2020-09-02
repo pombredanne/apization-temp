@@ -9,14 +9,14 @@ We collected a large sample of *StackOverflow* posts regarding questions on *Jav
 We asked human participants to apply the *APIzation* on a subset of the extracted snippets, to constitute the oracle for our study.
 In our evaluation study, we compare the automatic generated *APIzations* to those of the oracle.
 
-[so_questions.json.xz.part.000]: /data/evaluation/so_questions.json.xz.part.000
-[so_questions.json.xz.part.001]: /data/evaluation/so_questions.json.xz.part.001
-[so_questions.json.xz.part.002]: /data/evaluation/so_questions.json.xz.part.002
-[so_questions.json.xz.part.003]: /data/evaluation/so_questions.json.xz.part.003
 [so_answers.json.xz.part.000]: /data/evaluation/so_answers.json.xz.part.000
 [so_answers.json.xz.part.001]: /data/evaluation/so_answers.json.xz.part.001
 [so_answers.json.xz.part.002]: /data/evaluation/so_answers.json.xz.part.002
 [so_answers.json.xz.part.003]: /data/evaluation/so_answers.json.xz.part.003
+[so_questions.json.xz.part.000]: /data/evaluation/so_questions.json.xz.part.000
+[so_questions.json.xz.part.001]: /data/evaluation/so_questions.json.xz.part.001
+[so_questions.json.xz.part.002]: /data/evaluation/so_questions.json.xz.part.002
+[so_questions.json.xz.part.003]: /data/evaluation/so_questions.json.xz.part.003
 
 ## Process
 
@@ -25,7 +25,7 @@ The following table shows the steps of our processing method to collect the data
 Step | Description | Questions | Answers | Snippets | APIzator-APIs | Human-APIs | Data
 ---: | --- | --- | --- | --- | --- | --- | ---
 [1](#1) | *StackOverflow* archive | – | – | – | – | – | –
-[2](#2) | Filter suitable content | `1,014,980` | `1,730,251` | – | – | – | [`so_questions.json.xz.part.000`][so_questions.json.xz.part.000] <br /> [`so_questions.json.xz.part.001`][so_questions.json.xz.part.001] <br /> [`so_questions.json.xz.part.002`][so_questions.json.xz.part.002] <br /> [`so_questions.json.xz.part.003`][so_questions.json.xz.part.003] <br /> [`so_answers.json.xz.part.000`][so_answers.json.xz.part.000] <br /> [`so_answers.json.xz.part.001`][so_answers.json.xz.part.001] <br /> [`so_answers.json.xz.part.002`][so_answers.json.xz.part.002] <br /> [`so_answers.json.xz.part.003`][so_answers.json.xz.part.003]
+[2](#2) | Filter suitable content | `1,014,980` | `1,730,251` | – | – | – | [`so_answers.json.xz.part.000`][so_answers.json.xz.part.000] <br /> [`so_answers.json.xz.part.001`][so_answers.json.xz.part.001] <br /> [`so_answers.json.xz.part.002`][so_answers.json.xz.part.002] <br /> [`so_answers.json.xz.part.003`][so_answers.json.xz.part.003] <br /> [`so_questions.json.xz.part.000`][so_questions.json.xz.part.000] <br /> [`so_questions.json.xz.part.001`][so_questions.json.xz.part.001] <br /> [`so_questions.json.xz.part.002`][so_questions.json.xz.part.002] <br /> [`so_questions.json.xz.part.003`][so_questions.json.xz.part.003]
 [3](#3) | *APIzator* processing | – | – | x `12,689` | x `12,689` | – | [`apizator_apis.tar.xz`][apizator_apis.tar.xz]
 [4](#4) | Well-formed method declaration snippets removal | – | – | x `10,890` | x `10,890` | – | x
 [5](#5) | Rank most viewed snippets | – | – | `170` | `170` | – | [`human_evaluation_snippets.tar.xz`][human_evaluation_snippets.tar.xz]
