@@ -25,7 +25,7 @@ The following table shows the steps of our processing method to collect the data
 Step | Description | Questions | Answers | Snippets | APIzator-APIs | Human-APIs | Data
 ---: | --- | --- | --- | --- | --- | --- | ---
 [1](#1) | *StackOverflow* archive | – | – | – | – | – | –
-[2](#2) | Filter suitable content | `1,452,931` | `891,889` | – | – | – | [`so_questions.json.xz.part.000`][so_questions.json.xz.part.000] <br /> [`so_questions.json.xz.part.001`][so_questions.json.xz.part.001] <br /> [`so_questions.json.xz.part.002`][so_questions.json.xz.part.002] <br /> [`so_questions.json.xz.part.003`][so_questions.json.xz.part.003] <br /> [`so_answers.json.xz.part.000`][so_answers.json.xz.part.000] <br /> [`so_answers.json.xz.part.001`][so_answers.json.xz.part.001] <br /> [`so_answers.json.xz.part.002`][so_answers.json.xz.part.002] <br /> [`so_answers.json.xz.part.003`][so_answers.json.xz.part.003]
+[2](#2) | Filter suitable content | `1,014,980` | `1,730,251` | – | – | – | [`so_questions.json.xz.part.000`][so_questions.json.xz.part.000] <br /> [`so_questions.json.xz.part.001`][so_questions.json.xz.part.001] <br /> [`so_questions.json.xz.part.002`][so_questions.json.xz.part.002] <br /> [`so_questions.json.xz.part.003`][so_questions.json.xz.part.003] <br /> [`so_answers.json.xz.part.000`][so_answers.json.xz.part.000] <br /> [`so_answers.json.xz.part.001`][so_answers.json.xz.part.001] <br /> [`so_answers.json.xz.part.002`][so_answers.json.xz.part.002] <br /> [`so_answers.json.xz.part.003`][so_answers.json.xz.part.003]
 [3](#3) | *APIzator* processing | – | – | x `12,689` | x `12,689` | – | [`apizator_apis.tar.xz`][apizator_apis.tar.xz]
 [4](#4) | Well-formed method declaration snippets removal | – | – | x `10,890` | x `10,890` | – | x
 [5](#5) | Rank most viewed snippets | – | – | `170` | `170` | – | [`human_evaluation_snippets.tar.xz`][human_evaluation_snippets.tar.xz]
@@ -38,27 +38,29 @@ We start from the *StackOverflow* archive on [The Internet Archive](https://arch
 ### 2. Filter suitable content {#2}
 
 Starting from the large dump of *StackOverflow*, we filtered and extracted only questions tagged with *Java*.
-We produced the files:
+Then, we extracted the answers with at least one code snippet, defined by the HTML tags `<pre><code>`.
 
-* [`so_questions.json.xz.part.000`][so_questions.json.xz.part.000]
-* [`so_questions.json.xz.part.001`][so_questions.json.xz.part.001]
-* [`so_questions.json.xz.part.002`][so_questions.json.xz.part.002]
-* [`so_questions.json.xz.part.003`][so_questions.json.xz.part.003]
-
-The archive `so_questions.json.xz` file was split into multiple chunks.
-You can obtain a single file with the command:
-
-```bash
-cat so_questions.json.xz.part.* > so_questions.json.xz
-```
-
-We also extracted the answers.
 We produced the files:
 
 * [`so_answers.json.xz.part.000`][so_answers.json.xz.part.000]
 * [`so_answers.json.xz.part.001`][so_answers.json.xz.part.001]
 * [`so_answers.json.xz.part.002`][so_answers.json.xz.part.002]
 * [`so_answers.json.xz.part.003`][so_answers.json.xz.part.003]
+
+The archive `so_answers.json.xz` file was split into multiple chunks.
+You can obtain a single file with the command:
+
+```bash
+cat so_answers.json.xz.part.* > so_answers.json.xz
+```
+
+We also extracted the related questions.
+We produced the files:
+
+* [`so_questions.json.xz.part.000`][so_questions.json.xz.part.000]
+* [`so_questions.json.xz.part.001`][so_questions.json.xz.part.001]
+* [`so_questions.json.xz.part.002`][so_questions.json.xz.part.002]
+* [`so_questions.json.xz.part.003`][so_questions.json.xz.part.003]
 
 ### 3. *APIzator* processing {#3}
 <!-- NOT READY. -->
