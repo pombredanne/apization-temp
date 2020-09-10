@@ -65,6 +65,12 @@ We produced the files:
 ### 3. *APIzator* processing {#3}
 <!-- NOT READY. -->
 
+<!-- Questo è aggiunto recentemente -->
+We processed the *StackOverflow* posts by using *CSnippEX*.
+We set up processing time of `5` seconds to allow *CSnippEX* to make the snippet compilable and retrieve the possible importing packages.
+Considering the large amount of snippets to process, we had to set up an upper limit to make the mining activity feasible.
+At the end of the process, we obtained `` processed code snippets.
+
 We ran *APIzator* on the *Java* snippets from *StackOverflow*.
 This also includes *CSnippEx*, to make the snippets compilable and other passages that could have reduced the list of valid snippets.
 The produced *Java* source files are available in the [`apizator_apis.tar.xz`][apizator_apis.tar.xz] file.
