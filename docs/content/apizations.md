@@ -10,13 +10,13 @@ We only mined those examples on *GitHub* for which an explicit link to a *StackO
 
 The insights gained from this study led to four common *APIzation* patterns that establish the foundations of our proposed technique.
 
-[gh_files.json.xz]: /data/apizations/gh_files.json.xz
-[gh_files_cleaned.json.xz]: /data/apizations/gh_files_cleaned.json.xz
+[gh_files.jsonl.xz]: /data/apizations/gh_files.jsonl.xz
+[gh_files_cleaned.jsonl.xz]: /data/apizations/gh_files_cleaned.jsonl.xz
 [question_ids.csv]: /data/apizations/question_ids.csv
 [answer_ids.csv]: /data/apizations/answer_ids.csv
 [so_answers.csv.xz]: /data/apizations/so_answers.csv.xz
 [so_answers_to_questions.csv.xz]: /data/apizations/so_answers_to_questions.csv.xz
-[ghso_files_answers.json.xz]: /data/apizations/ghso_files_answers.json.xz
+[ghso_files_answers.jsonl.xz]: /data/apizations/ghso_files_answers.jsonl.xz
 [sogh_pairs_clones.json.xz]: /data/apizations/sogh_pairs_clones.json.xz
 [sogh_pairs_clones_files.tar.xz]: /data/apizations/sogh_pairs_clones_files.tar.xz
 [sogh_pairs_clones_diffs.tar.xz]: /data/apizations/sogh_pairs_clones_diffs.tar.xz
@@ -36,10 +36,10 @@ The following table shows the steps of our processing method to collect the data
 Step | Description | Files | Questions | Answers | Methods | Snippets | Pairs | Data
 ---: | --- | --- | --- | --- | --- | --- | --- | ---
 [1](#1) | *GitHub* archive | `~1,000,000` | – | – | – | – | – | –
-[2](#2) | Filter *Java* files with an explicit link to *StackOverflow* | `57,810` | – | – | – | – | – | [`gh_files.json.xz`][gh_files.json.xz]
-[3](#3) | Remove duplicates and links extraction | `29,035` | `11,300` | `4,008` | – | – | – | [`gh_files_cleaned.json.xz`][gh_files_cleaned.json.xz] <br /> [`question_ids.csv`][question_ids.csv] <br /> [`answer_ids.csv`][answer_ids.csv]
+[2](#2) | Filter *Java* files with an explicit link to *StackOverflow* | `57,810` | – | – | – | – | – | [`gh_files.jsonl.xz`][gh_files.jsonl.xz]
+[3](#3) | Remove duplicates and links extraction | `29,035` | `11,300` | `4,008` | – | – | – | [`gh_files_cleaned.jsonl.xz`][gh_files_cleaned.jsonl.xz] <br /> [`question_ids.csv`][question_ids.csv] <br /> [`answer_ids.csv`][answer_ids.csv]
 [4](#4) | Extract answers text from *StackOverflow* | – | `10,991` | `64,678` | – | – | – | [`so_answers.csv.xz`][so_answers.csv.xz] <br /> [`so_answers_to_questions.csv.xz`][so_answers_to_questions.csv.xz]
-[5](#5) | Combine *GitHub* files and *StackOverflow* answers | `27,940` | `13,300` | `63,123` | – | – | – | [`ghso_files_answers.json.xz`][ghso_files_answers.json.xz]
+[5](#5) | Combine *GitHub* files and *StackOverflow* answers | `27,940` | `13,300` | `63,123` | – | – | – | [`ghso_files_answers.jsonl.xz`][ghso_files_answers.jsonl.xz]
 [6](#6) | *Type 3* clone detection | `330` | – | `199` | `330` | `199` | `330` | [`sogh_pairs_clones.json.xz`][sogh_pairs_clones.json.xz]
 [7](#7) | Data preparation for manual evaluation | – | – | – | – | – | – | [`sogh_pairs_clones_files.tar.xz`][sogh_pairs_clones_files.tar.xz] <br /> [`sogh_pairs_clones_diffs.tar.xz`][sogh_pairs_clones_diffs.tar.xz]
 [8](#8) | Manual check | – | – | – | `135` | `85` | `135` | [`sogh_pairs_diffs_apizations.tar.xz`][sogh_pairs_diffs_apizations.tar.xz] <br /> [`sogh_pairs_diffs_different_semantic.tar.xz`][sogh_pairs_diffs_different_semantic.tar.xz] <br /> [`sogh_pairs_diffs_tests.tar.xz`][sogh_pairs_diffs_tests.tar.xz] <br /> [`sogh_pairs_diffs_false_positives.tar.xz`][sogh_pairs_diffs_false_positives.tar.xz]
@@ -55,12 +55,12 @@ We start from the *GitHub* archive on [Google BigQuery](https://cloud.google.com
 
 We queried *BigQuery* and extracted those *Java* files having an explicit link to a StackOverflow page, `%stackoverflow.com%`.
 In particular, we queried the `bigquery-public-data.github_repos.contents` table.
-We produced the file [`gh_files.json.xz`][gh_files.json.xz].
+We produced the file [`gh_files.jsonl.xz`][gh_files.jsonl.xz].
 
 ### 3. Remove duplicates and links extraction {#3}
 
 We cleaned the data from duplicates and recognized the IDs of *StackOverflow* questions and answers.
-We processed [`gh_files.json.xz`][gh_files.json.xz] through a *Python* script that saves the filtered GitHub files into [`gh_files_cleaned.json.xz`][gh_files_cleaned.json.xz].
+We processed [`gh_files.jsonl.xz`][gh_files.jsonl.xz] through a *Python* script that saves the filtered GitHub files into [`gh_files_cleaned.jsonl.xz`][gh_files_cleaned.jsonl.xz].
 We also creates [`question_ids.csv`][question_ids.csv] and [`answer_ids.csv`][answer_ids.csv] files, which contain the IDs of the linked questions and answers, respectively.
 In the case of [`answer_ids.csv`][answer_ids.csv], we find the associated question IDs in the next passages, being an answer IDs unique regardless of the question.
 It might also happen that a single file has multiple *StackOverflow* link.
@@ -78,13 +78,13 @@ Until this moment, we have the information on all the involved questions and pos
 
 ### 5. Combine *GitHub* files and *StackOverflow* answers {#5}
 
-We combined [`gh_files_cleaned.json.xz`][gh_files_cleaned.json.xz] containing the *Java* files, with the answers contained in [`so_answers.csv.xz`][so_answers.csv.xz] and [`so_answers_to_questions.csv.xz`][so_answers_to_questions.csv.xz], using a Python script.
+We combined [`gh_files_cleaned.jsonl.xz`][gh_files_cleaned.jsonl.xz] containing the *Java* files, with the answers contained in [`so_answers.csv.xz`][so_answers.csv.xz] and [`so_answers_to_questions.csv.xz`][so_answers_to_questions.csv.xz], using a Python script.
 We also removed all the files for which we could not obtain all the required information.
-We save the results into the file [`ghso_files_answers.json.xz`][ghso_files_answers.json.xz], which contains for every GitHub file all the possible answers.
+We save the results into the file [`ghso_files_answers.jsonl.xz`][ghso_files_answers.jsonl.xz], which contains for every GitHub file all the possible answers.
 
 ### 6. *Type 3* clone detection {#6}
 
-We processed [`ghso_files_answers.json.xz`][ghso_files_answers.json.xz] to extract `public` methods from files, only those reporting an explicit link to *StackOverflow* in the documentation/comment.
+We processed [`ghso_files_answers.jsonl.xz`][ghso_files_answers.jsonl.xz] to extract `public` methods from files, only those reporting an explicit link to *StackOverflow* in the documentation/comment.
 
 We converted all the *StackOverflow* possible answer texts into code snippets.
 For each links between a method and possible snippets, we created the pairs of `(snippet, method)`.
