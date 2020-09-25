@@ -1,0 +1,51 @@
+---
+title: "[Q#2592207][A#2592258] How to improve look and feel of JAVA swing GUI?"
+---
+
+https://stackoverflow.com/q/2592207
+
+I am working on a project that uses Java Swing. The default look and feel of the Java Swing GUI is very boring. Is there any way I can use a better look and feel? Something like on web pages...
+
+
+
+## Original code snippet
+
+https://stackoverflow.com/a/2592258
+
+You can set the look and feel to reflect the platform:
+If this is not nice enough for you, take a look at SWT for Eclipse.
+
+```java
+try { 
+    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+} catch (Exception e) {
+    e.printStackTrace();
+}
+```
+
+## Produced APIzation
+
+[`APIzator2592258.java`](/data/search/java/APIzator2592258.java)
+
+```java
+package com.stackoverflow.api;
+
+import javax.swing.UIManager;
+
+/**
+ * How to improve look and feel of JAVA swing GUI?
+ *
+ * @author APIzator
+ * @see <a href="https://stackoverflow.com/a/2592258">https://stackoverflow.com/a/2592258</a>
+ */
+public class APIzator2592258 {
+
+  public static void improveLook() throws RuntimeException {
+    try {
+      UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+}
+```

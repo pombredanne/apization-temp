@@ -2,7 +2,7 @@
     {{- range $index, $element := where site.RegularPages "Type" "in" site.Params.mainSections -}}
     {{ if $index }},{{ end }}
     {    
-        "title": "{{ .Title }}",
+        "title": {{ .Title | jsonify }},
         "url": "{{ .RelPermalink }}",
         "body": {{ .Plain | jsonify }}
     }

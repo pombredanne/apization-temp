@@ -1,0 +1,128 @@
+---
+title: "[Q#6546193][A#6548203] How to catch an Exception from a thread"
+---
+
+https://stackoverflow.com/q/6546193
+
+I have Java main class, in the class, I start a new thread, in the main, it waits until the thread dies. At some moment, I throw a runtime exception from the thread, but I can't catch the exception thrown from the thread in the main class.
+Here is the code:
+Anybody knows why?
+
+
+```java
+public class Test extends Thread
+{
+  public static void main(String[] args) throws InterruptedException
+  {
+    Test t = new Test();
+
+    try
+    {
+      t.start();
+      t.join();
+    }
+    catch(RuntimeException e)
+    {
+      System.out.println("** RuntimeException from main");
+    }
+
+    System.out.println("Main stoped");
+  }
+
+  @Override
+  public void run()
+  {
+    try
+    {
+      while(true)
+      {
+        System.out.println("** Started");
+
+        sleep(2000);
+
+        throw new RuntimeException("exception from thread");
+      }
+    }
+    catch (RuntimeException e)
+    {
+      System.out.println("** RuntimeException from thread");
+
+      throw e;
+    } 
+    catch (InterruptedException e)
+    {
+
+    }
+  }
+}
+```
+
+
+## Original code snippet
+
+https://stackoverflow.com/a/6548203
+
+Use a Thread.UncaughtExceptionHandler.
+
+```java
+Thread.UncaughtExceptionHandler h = new Thread.UncaughtExceptionHandler() {
+    public void uncaughtException(Thread th, Throwable ex) {
+        System.out.println("Uncaught exception: " + ex);
+    }
+};
+Thread t = new Thread() {
+    public void run() {
+        System.out.println("Sleeping ...");
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            System.out.println("Interrupted.");
+        }
+        System.out.println("Throwing exception ...");
+        throw new RuntimeException();
+    }
+};
+t.setUncaughtExceptionHandler(h);
+t.start();
+```
+
+## Produced APIzation
+
+[`APIzator6548203.java`](/data/search/java/APIzator6548203.java)
+
+```java
+package com.stackoverflow.api;
+
+/**
+ * How to catch an Exception from a thread
+ *
+ * @author APIzator
+ * @see <a href="https://stackoverflow.com/a/6548203">https://stackoverflow.com/a/6548203</a>
+ */
+public class APIzator6548203 {
+
+  public static void catchException() throws RuntimeException {
+    Thread.UncaughtExceptionHandler h = new Thread.UncaughtExceptionHandler() {
+
+      public void uncaughtException(Thread th, Throwable ex) {
+        System.out.println("Uncaught exception: " + ex);
+      }
+    };
+    Thread t = new Thread() {
+
+      public void run() {
+        System.out.println("Sleeping ...");
+        try {
+          Thread.sleep(1000);
+        } catch (InterruptedException e) {
+          System.out.println("Interrupted.");
+        }
+        System.out.println("Throwing exception ...");
+        throw new RuntimeException();
+      }
+    };
+    t.setUncaughtExceptionHandler(h);
+    t.start();
+  }
+}
+```
