@@ -1,8 +1,5 @@
 ---
 title: 🔍 Search
-outputs:
-- html
-- json
 ---
 
 <!-- You can use our search engine to look for an *APIzation*.
