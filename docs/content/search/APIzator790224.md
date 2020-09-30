@@ -1,0 +1,96 @@
+---
+title: "[Q#789517][A#790224] Java - How to create a custom dialog box?"
+---
+
+https://stackoverflow.com/q/789517
+
+I have a button on a JFrame that when clicked I want a dialog box to popup with multiple text areas for user input.  I have been looking all around to try to figure out how to do this but I keep on getting more confused. Can anyone help?
+
+
+
+## Original code snippet
+
+https://stackoverflow.com/a/790224
+
+If you don't need much in the way of custom behavior, JOptionPane is a good time saver.  It takes care of the placement and localization of OK / Cancel options, and is a quick-and-dirty way to show a custom dialog without needing to define your own classes.  Most of the time the "message" parameter in JOptionPane is a String, but you can pass in a JComponent or array of JComponents as well.
+Example:
+
+```java
+JTextField firstName = new JTextField();
+JTextField lastName = new JTextField();
+JPasswordField password = new JPasswordField();
+final JComponent[] inputs = new JComponent[] {
+        new JLabel("First"),
+        firstName,
+        new JLabel("Last"),
+        lastName,
+        new JLabel("Password"),
+        password
+};
+int result = JOptionPane.showConfirmDialog(null, inputs, "My custom dialog", JOptionPane.PLAIN_MESSAGE);
+if (result == JOptionPane.OK_OPTION) {
+    System.out.println("You entered " +
+            firstName.getText() + ", " +
+            lastName.getText() + ", " +
+            password.getText());
+} else {
+    System.out.println("User canceled / closed the dialog, result = " + result);
+}
+```
+
+## Produced APIzation
+
+[`APIzator790224.java`](/data/search/java/APIzator790224.java)
+
+```java
+package com.stackoverflow.api;
+
+import javax.swing.JComponent;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+/**
+ * Java - How to create a custom dialog box?
+ *
+ * @author APIzator
+ * @see <a href="https://stackoverflow.com/a/790224">https://stackoverflow.com/a/790224</a>
+ */
+public class APIzator790224 {
+
+  public static void createBox() throws RuntimeException {
+    JTextField firstName = new JTextField();
+    JTextField lastName = new JTextField();
+    JPasswordField password = new JPasswordField();
+    final JComponent[] inputs = new JComponent[] {
+      new JLabel("First"),
+      firstName,
+      new JLabel("Last"),
+      lastName,
+      new JLabel("Password"),
+      password,
+    };
+    int result = JOptionPane.showConfirmDialog(
+      null,
+      inputs,
+      "My custom dialog",
+      JOptionPane.PLAIN_MESSAGE
+    );
+    if (result == JOptionPane.OK_OPTION) {
+      System.out.println(
+        "You entered " +
+        firstName.getText() +
+        ", " +
+        lastName.getText() +
+        ", " +
+        password.getText()
+      );
+    } else {
+      System.out.println(
+        "User canceled / closed the dialog, result = " + result
+      );
+    }
+  }
+}
+```

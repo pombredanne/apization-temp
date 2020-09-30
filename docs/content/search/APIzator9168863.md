@@ -1,0 +1,59 @@
+---
+title: "[Q#9168759][A#9168863] Netbeans how to set command line arguments in Java"
+---
+
+https://stackoverflow.com/q/9168759
+
+I am trying to set command line arguments in a Netbeans 7.1 Java project on Windows 7 64 bit.
+Netbeans is not passing the arguments I give it.
+I go to Project --> Properties --> Run --> and type the arguments next to "Arguments" however the arguments are not passed to the program.  How do I pass them?
+
+
+
+## Original code snippet
+
+https://stackoverflow.com/a/9168863
+
+I am guessing that you are running the file using Run | Run File (or shift-F6) rather than Run | Run Main Project.  The NetBeans 7.1 help file (F1 is your friend!) states for the Arguments parameter:
+Add arguments to pass to the main class during application execution.
+  Note that arguments cannot be passed to individual files.
+I verified this with a little snippet of code:
+I set Run -> Arguments to x y z.  When I ran the file by itself I got no output.  When I ran the project the output was:
+
+```java
+public class Junk
+{
+    public static void main(String[] args)
+    {
+        for (String s : args)
+            System.out.println("arg -> " + s);
+    }
+}
+arg -> x
+arg -> y
+arg -> z
+```
+
+## Produced APIzation
+
+[`APIzator9168863.java`](/data/search/java/APIzator9168863.java)
+
+```java
+package com.stackoverflow.api;
+
+/**
+ * Netbeans how to set command line arguments in Java
+ *
+ * @author APIzator
+ * @see <a href="https://stackoverflow.com/a/9168863">https://stackoverflow.com/a/9168863</a>
+ */
+public class APIzator9168863 {
+
+  public class Junk {
+
+    public static String netbean() {
+      return s;
+    }
+  }
+}
+```

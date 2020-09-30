@@ -1,0 +1,54 @@
+---
+title: "[Q#5483330][A#5483341] How does one convert a HashMap to a List in Java?"
+---
+
+https://stackoverflow.com/q/5483330
+
+In Java, how does one get the values of a HashMap returned as a List?
+
+
+
+## Original code snippet
+
+https://stackoverflow.com/a/5483341
+
+
+
+```java
+HashMap<Integer, String> map = new HashMap<Integer, String>();
+map.put (1, "Mark");
+map.put (2, "Tarryn");
+List<String> list = new ArrayList<String>(map.values());
+for (String s : list) {
+    System.out.println(s);
+}
+```
+
+## Produced APIzation
+
+[`APIzator5483341.java`](/data/search/java/APIzator5483341.java)
+
+```java
+package com.stackoverflow.api;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+/**
+ * How does one convert a HashMap to a List in Java?
+ *
+ * @author APIzator
+ * @see <a href="https://stackoverflow.com/a/5483341">https://stackoverflow.com/a/5483341</a>
+ */
+public class APIzator5483341 {
+
+  public static void convertHashmap(HashMap<Integer, String> map)
+    throws RuntimeException {
+    List<String> list = new ArrayList<String>(map.values());
+    for (String s : list) {
+      System.out.println(s);
+    }
+  }
+}
+```
