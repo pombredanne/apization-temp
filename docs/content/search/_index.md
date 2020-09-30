@@ -1,8 +1,8 @@
 ---
 title: 🔍 Search
 outputs:
-- html
-- json
+    - html
+    - json
 ---
 
 <!-- You can use our search engine to look for an *APIzation*.

@@ -51,7 +51,7 @@ window.onload = function() {
     searchResults = document.getElementById('search-results');
 
     // Request and index documents.
-    fetch('/search/index.json', {method: 'get'})
+    fetch('/a/index.json', {method: 'get'})
     .then(result => result.json())
     .then(result => {
         // Index the documents.
