@@ -9,14 +9,14 @@ We collected a large sample of *StackOverflow* posts regarding questions on *Jav
 We asked human participants to apply the *APIzation* on a subset of the extracted snippets, to constitute the oracle for our study.
 In our evaluation study, we compare the automatic generated *APIzations* to those of the oracle.
 
-[so_answers.jsonl.xz.part.000]: /data/evaluation/so_answers.jsonl.xz.part.000
-[so_answers.jsonl.xz.part.001]: /data/evaluation/so_answers.jsonl.xz.part.001
-[so_answers.jsonl.xz.part.002]: /data/evaluation/so_answers.jsonl.xz.part.002
-[so_answers.jsonl.xz.part.003]: /data/evaluation/so_answers.jsonl.xz.part.003
-[so_questions.jsonl.xz.part.000]: /data/evaluation/so_questions.jsonl.xz.part.000
-[so_questions.jsonl.xz.part.001]: /data/evaluation/so_questions.jsonl.xz.part.001
-[so_questions.jsonl.xz.part.002]: /data/evaluation/so_questions.jsonl.xz.part.002
-[so_questions.jsonl.xz.part.003]: /data/evaluation/so_questions.jsonl.xz.part.003
+[so_answers.jsonl.xz.part.000]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/so_answers.jsonl.xz.part.000
+[so_answers.jsonl.xz.part.001]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/so_answers.jsonl.xz.part.001
+[so_answers.jsonl.xz.part.002]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/so_answers.jsonl.xz.part.002
+[so_answers.jsonl.xz.part.003]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/so_answers.jsonl.xz.part.003
+[so_questions.jsonl.xz.part.000]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/so_questions.jsonl.xz.part.000
+[so_questions.jsonl.xz.part.001]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/so_questions.jsonl.xz.part.001
+[so_questions.jsonl.xz.part.002]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/so_questions.jsonl.xz.part.002
+[so_questions.jsonl.xz.part.003]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/so_questions.jsonl.xz.part.003
 
 ## Process
 

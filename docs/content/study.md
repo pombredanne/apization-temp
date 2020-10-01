@@ -10,22 +10,22 @@ We only mined those examples on *GitHub* for which an explicit link to a *StackO
 
 The insights gained from this study led to four common *APIzation* patterns that establish the foundations of our proposed technique.
 
-[gh_files.jsonl.xz]: /data/apizations/gh_files.jsonl.xz
-[gh_files_cleaned.jsonl.xz]: /data/apizations/gh_files_cleaned.jsonl.xz
-[question_ids.csv]: /data/apizations/question_ids.csv
-[answer_ids.csv]: /data/apizations/answer_ids.csv
-[so_answers.csv.xz]: /data/apizations/so_answers.csv.xz
-[so_answers_to_questions.csv.xz]: /data/apizations/so_answers_to_questions.csv.xz
-[ghso_files_answers.jsonl.xz]: /data/apizations/ghso_files_answers.jsonl.xz
-[sogh_pairs_clones.json.xz]: /data/apizations/sogh_pairs_clones.json.xz
-[sogh_pairs_clones_files.tar.xz]: /data/apizations/sogh_pairs_clones_files.tar.xz
-[sogh_pairs_clones_diffs.tar.xz]: /data/apizations/sogh_pairs_clones_diffs.tar.xz
-[sogh_pairs_diffs_apizations.tar.xz]: /data/apizations/sogh_pairs_diffs_apizations.tar.xz
-[sogh_pairs_diffs_different_semantic.tar.xz]: /data/apizations/sogh_pairs_diffs_different_semantic.tar.xz
-[sogh_pairs_diffs_tests.tar.xz]: /data/apizations/sogh_pairs_diffs_tests.tar.xz
-[sogh_pairs_diffs_false_positives.tar.xz]: /data/apizations/sogh_pairs_diffs_false_positives.tar.xz
-[parameters_patterns_analysis.csv]: /data/apizations/parameters_patterns_analysis.csv
-[return_patterns_analysis.csv]: /data/apizations/return_patterns_analysis.csv
+[gh_files.jsonl.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/gh_files.jsonl.xz
+[gh_files_cleaned.jsonl.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/gh_files_cleaned.jsonl.xz
+[question_ids.csv]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/question_ids.csv
+[answer_ids.csv]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/answer_ids.csv
+[so_answers.csv.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/so_answers.csv.xz
+[so_answers_to_questions.csv.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/so_answers_to_questions.csv.xz
+[ghso_files_answers.jsonl.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/ghso_files_answers.jsonl.xz
+[sogh_pairs_clones.json.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/sogh_pairs_clones.json.xz
+[sogh_pairs_clones_files.tar.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/sogh_pairs_clones_files.tar.xz
+[sogh_pairs_clones_diffs.tar.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/sogh_pairs_clones_diffs.tar.xz
+[sogh_pairs_diffs_apizations.tar.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/sogh_pairs_diffs_apizations.tar.xz
+[sogh_pairs_diffs_different_semantic.tar.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/sogh_pairs_diffs_different_semantic.tar.xz
+[sogh_pairs_diffs_tests.tar.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/sogh_pairs_diffs_tests.tar.xz
+[sogh_pairs_diffs_false_positives.tar.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/sogh_pairs_diffs_false_positives.tar.xz
+[parameters_patterns_analysis.csv]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/parameters_patterns_analysis.csv
+[return_patterns_analysis.csv]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/return_patterns_analysis.csv
 
 ## Process
 

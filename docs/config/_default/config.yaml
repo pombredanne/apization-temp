@@ -5,9 +5,9 @@ theme: anubis
 
 menu:
   main:
-    - identifier: apizations
+    - identifier: study
       name: 📊 Study on APIzations
-      url: /apizations/
+      url: /study/
       weight: 1
     - identifier: evaluation
       name: 📝 Evaluation of the approach
