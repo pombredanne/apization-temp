@@ -1,5 +1,5 @@
-var idx, searchInput, searchResults = null;
-var documents = [];
+var idx, info, searchInput, searchResults = null;
+
 
 function renderSearchResults(results) {
     if (results.length > 0) {
@@ -13,7 +13,7 @@ function renderSearchResults(results) {
             item.className = 'post-short-list';
             item.innerHTML = `
             <header> 
-                <h2><a href="${result.ref}">${documents[result.ref].title}</a></h2>
+                <h2><a href="${result.ref}">${info[result.ref].title}</a></h2>
             </header>
             `;
             searchResults.appendChild(item);
@@ -50,24 +50,16 @@ window.onload = function() {
     searchInput = document.getElementById('search-input');
     searchResults = document.getElementById('search-results');
 
-    // Request and index documents.
-    fetch('/a/index.json', {method: 'get'})
+    // Load the index.
+    fetch('/lunr-index.json', {method: 'get'})
     .then(result => result.json())
     .then(result => {
         // Index the documents.
-        idx = lunr(function() {
-            this.ref('url');
-            this.field('title');
-            this.field('body');
+        idx = lunr.Index.load(result.index);
+        info = result.information;
 
-            result.forEach(function(document) {
-                this.add(document);
-                documents[document.url] = {
-                    'title': document.title,
-                    'body': document.body,
-                };
-            }, this);
-        });
+        // Enable the input.
+        searchInput.disabled = false
 
         // Loads the data and register the handler.
         registerSearchHandler();

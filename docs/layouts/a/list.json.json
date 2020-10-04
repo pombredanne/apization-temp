@@ -4,7 +4,9 @@
     {    
         "title": {{ .Title | jsonify }},
         "url": "{{ .RelPermalink }}",
-        "body": {{ .Plain | jsonify }}
+        "question_text": {{ .Params.question_text | jsonify }},
+        "answer_text": {{ .Params.answer_text | jsonify }},
+        "apization_code": {{ .Params.apization_code | jsonify }}
     }
     {{- end }}
 ]
