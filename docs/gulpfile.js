@@ -29,8 +29,8 @@ function hugoServer(cb) {
         }
     });
 
-    watch(['**/*', '!public/**/*', '!gulpfile.js'], series(clean, hugoBuild, lunrIndex));
-    watch('public/**/*').on('change', browserSync.reload);
+    watch(['**/*', '!public/**/*', '!gulpfile.js'], series(clean, hugoBuild, lunrIndex, browserSync.reload));
+    // watch('public/**/*').on('change', browserSync.reload);
 }
 
 function lunrIndex(cb) {

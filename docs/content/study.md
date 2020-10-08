@@ -42,7 +42,7 @@ We start from the *GitHub* archive on [Google BigQuery](https://cloud.google.com
 
 ### 2. Filter *Java* files with an explicit link to *StackOverflow* {#2}
 
-We queried *BigQuery* and extracted those *Java* files having an explicit link to a StackOverflow page, `%stackoverflow.com%`.
+We queried *BigQuery* and extracted those *Java* files having an explicit link to a *StackOverflow* page, `%stackoverflow.com%`.
 In particular, we queried the `bigquery-public-data.github_repos.contents` table.
 We produced the file [`gh_files.jsonl.xz`][gh_files.jsonl.xz].
 
