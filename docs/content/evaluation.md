@@ -24,7 +24,7 @@ Step | Description | Questions | Answers | Snippets | APIzator-APIs | Human-APIs
 [3](#3) | Make the snippets compilable | `107,536` | `141,064` | `141,064` | – | – | [`external_libraries_jars.tar.xz.part.000`][external_libraries_jars.tar.xz.part.000] <br /> [`external_libraries_jars.tar.xz.part.001`][external_libraries_jars.tar.xz.part.001] <br /> [`external_libraries_jars.tar.xz.part.002`][external_libraries_jars.tar.xz.part.002] <br /> [`external_libraries_jars.tar.xz.part.003`][external_libraries_jars.tar.xz.part.003] <br /> [`external_libraries_jars.tar.xz.part.004`][external_libraries_jars.tar.xz.part.004] <hr /> [`compilable_snippets.tar.xz`][compilable_snippets.tar.xz]
 [4](#4) | *APIzator* processing | `84,267` | `109,930` | `109,930` | `109,930` | – | [`apizations.tar.xz`][apizations.tar.xz]
 [5](#5) | Selecting *APIzations* for evaluation | `8,526` | `9,901` | `9,901` | `9,901` | – | [`evaluation_candidates.csv`][evaluation_candidates.csv]
-[6](#6) | Human *APIzation* | – | – | – | – | `[X]` | [`human_apizations.tar.xz`][human_apizations.tar.xz]
+[6](#6) | Evaluation with human *APIzations* | – | – | – | `200` | `200` | [`evaluation_human_apizations.tar.xz`][evaluation_human_apizations.tar.xz] <hr /> [`evaluation_apizator_apizations.tar.xz`][evaluation_apizator_apizations.tar.xz]
 
 
 
@@ -109,13 +109,12 @@ In total, we collected a total of `9,901` *APIzations*, whose list is included i
 
 
 
-### 6. Human *APIzation* {#6}
+### 6. Evaluation with human *APIzations* {#6}
 
-We asked `[X]` human participants to perform a manual *APIzation*, `10` snippets each.
-We randomly assigned the snippets from the [`apizations_candidates.csv`][apizations_candidates.csv] list.
-`[X]` out of `[X]` human participants performed the *APIzation*.
-Thus, they produced a total of `[X]` method declarations.
-We release the produced *APIzations* in the file [`human_apizations.tar.xz`][human_apizations.tar.xz].
+We asked `20` human participants to perform a manual *APIzation*, `10` snippets each.
+We randomly assigned the snippets from the [`evaluation_candidates.csv`][evaluation_candidates.csv] list.
+We release the produced *APIzations* in the file [`evaluation_human_apizations.tar.xz`][evaluation_human_apizations.tar.xz].
+The set of *APIzations* we compared in the evaluation is released in the file [`evaluation_apizator_apizations.tar.xz`][evaluation_apizator_apizations.tar.xz].
 
 Moreover, we release all the snippets, human' and our tool's *APIzations* in the form of browsable pages at the section [APIzations](/apizations).
 
@@ -143,4 +142,5 @@ Moreover, we release all the snippets, human' and our tool's *APIzations* in the
 
 [evaluation_candidates.csv]: https://github.com/pasqualesalza/apization-temp-data/raw/master/evaluation/evaluation_candidates.csv
 
-[human_apizations.tar.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/evaluation/human_apizations.tar.xz
+[evaluation_human_apizations.tar.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/evaluation/evaluation_human_apizations.tar.xz
+[evaluation_apizator_apizations.tar.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/evaluation/evaluation_apizator_apizations.tar.xz
