@@ -24,7 +24,7 @@ Step | Description | Questions | Answers | Snippets | APIzator-APIs | Human-APIs
 [3](#3) | Make the snippets compilable | `107,536` | `141,064` | `141,064` | – | – | [`external_libraries_jars.tar.xz.part.000`][external_libraries_jars.tar.xz.part.000] <br /> [`external_libraries_jars.tar.xz.part.001`][external_libraries_jars.tar.xz.part.001] <br /> [`external_libraries_jars.tar.xz.part.002`][external_libraries_jars.tar.xz.part.002] <br /> [`external_libraries_jars.tar.xz.part.003`][external_libraries_jars.tar.xz.part.003] <br /> [`external_libraries_jars.tar.xz.part.004`][external_libraries_jars.tar.xz.part.004] <hr /> [`compilable_snippets.tar.xz`][compilable_snippets.tar.xz]
 [4](#4) | *APIzator* processing | `84,267` | `109,930` | `109,930` | `109,930` | – | [`apizations.tar.xz`][apizations.tar.xz]
 [5](#5) | Selecting *APIzations* for evaluation | `8,526` | `9,901` | `9,901` | `9,901` | – | [`evaluation_candidates.csv`][evaluation_candidates.csv]
-[6](#6) | Evaluation with human *APIzations* | – | – | – | `200` | `200` | [`evaluation_human_apizations.tar.xz`][evaluation_human_apizations.tar.xz] <hr /> [`evaluation_apizator_apizations.tar.xz`][evaluation_apizator_apizations.tar.xz]
+[6](#6) | Evaluation with human *APIzations* | `200` | `200` | `200` | `200` | `200` | [`evaluation_human_apizations.tar.xz`][evaluation_human_apizations.tar.xz] <hr /> [`evaluation_apizator_apizations.tar.xz`][evaluation_apizator_apizations.tar.xz]
 
 
 
