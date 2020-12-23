@@ -10,8 +10,6 @@ We only mined those examples on *GitHub* for which an explicit link to a *StackO
 
 The insights gained from this study led to four common *APIzation* patterns that establish the foundations of our proposed technique.
 
-
-
 ## Process
 
 The following table shows the steps of our processing method to collect the data for the study.
@@ -32,13 +30,9 @@ Step | Description | Files | Questions | Answers | Methods | Snippets | Pairs | 
 
 </div>
 
-
-
 ### 1. *GitHub* archive {#1}
 
-We start from the *GitHub* archive on [Google BigQuery](https://cloud.google.com/bigquery) with the dump of `May, 2019`.
-
-
+We started from the *GitHub* archive on [Google BigQuery](https://cloud.google.com/bigquery) with the dump of `May, 2019`.
 
 ### 2. Filter *Java* files with an explicit link to *StackOverflow* {#2}
 
@@ -46,17 +40,13 @@ We queried *BigQuery* and extracted those *Java* files having an explicit link t
 In particular, we queried the `bigquery-public-data.github_repos.contents` table.
 We produced the file [`gh_files.jsonl.xz`][gh_files.jsonl.xz].
 
-
-
 ### 3. Remove duplicates and links extraction {#3}
 
 We cleaned the data from duplicates and recognized the IDs of *StackOverflow* questions and answers.
-We processed [`gh_files.jsonl.xz`][gh_files.jsonl.xz] through a *Python* script that saves the filtered GitHub files into [`gh_files_cleaned.jsonl.xz`][gh_files_cleaned.jsonl.xz].
-We also creates [`question_ids.csv`][question_ids.csv] and [`answer_ids.csv`][answer_ids.csv] files, which contain the IDs of the linked questions and answers, respectively.
-In the case of [`answer_ids.csv`][answer_ids.csv], we find the associated question IDs in the next passages, being an answer IDs unique regardless of the question.
-It might also happen that a single file has multiple *StackOverflow* link.
-
-
+We processed [`gh_files.jsonl.xz`][gh_files.jsonl.xz] through a *Python* script that saves the filtered *GitHub* files into [`gh_files_cleaned.jsonl.xz`][gh_files_cleaned.jsonl.xz].
+We also created the [`question_ids.csv`][question_ids.csv] and [`answer_ids.csv`][answer_ids.csv] files, which contain the IDs of the linked questions and answers, respectively.
+In the case of [`answer_ids.csv`][answer_ids.csv], we found the associated question IDs in the next passages, being an answer ID unique regardless of the question.
+It might also happen that a single file has multiple *StackOverflow* links.
 
 ### 4. Extract answers text from *StackOverflow* {#4}
 
@@ -69,15 +59,11 @@ Instead, we ran another query to collect all the answer posts related to the que
 We saved the results into a CSV file [`so_answers_to_questions.csv.xz`][so_answers_to_questions.csv.xz].
 Until this moment, we have the information on all the involved questions and possible answers.
 
-
-
 ### 5. Combine *GitHub* files and *StackOverflow* answers {#5}
 
 We combined [`gh_files_cleaned.jsonl.xz`][gh_files_cleaned.jsonl.xz] containing the *Java* files, with the answers contained in [`so_answers.csv.xz`][so_answers.csv.xz] and [`so_answers_to_questions.csv.xz`][so_answers_to_questions.csv.xz], using a Python script.
 We also removed all the files for which we could not obtain all the required information.
-We save the results into the file [`ghso_files_answers.jsonl.xz`][ghso_files_answers.jsonl.xz], which contains for every GitHub file all the possible answers.
-
-
+We save the results into the file [`ghso_files_answers.jsonl.xz`][ghso_files_answers.jsonl.xz], which contains for every *GitHub* file all the possible answers.
 
 ### 6. *Type 3* clone detection {#6}
 
@@ -89,8 +75,6 @@ We also filtered out those snippets with less lines of code than `6`.
 
 Finally, we detected the *type 3* code clones between snippet and method with a `70 %` matching threshold.
 We saved the results in the [`sogh_pairs_clones.json.xz`][sogh_pairs_clones.json.xz] file.
-
-
 
 ### 7. Data preparation for manual evaluation {#7}
 
@@ -106,19 +90,15 @@ Then, we created the HTML files, visually showing the differences between the sn
 
 We saved all the files into a compressed file [`sogh_pairs_clones_diffs.tar.xz`][sogh_pairs_clones_diffs.tar.xz].
 
-
-
 ### 8. Manual check {#8}
 
 We pruned the pairs due to spurious code clones, those snippets that were included into a larger *GitHub* method.
 We manually evaluated and classified all the pairs:
 
-* [`sogh_pairs_diffs_apizations.tar.xz`][sogh_pairs_diffs_apizations.tar.xz], the final set of pairs used for the analysis, as examples of valid APIzations
+* [`sogh_pairs_diffs_apizations.tar.xz`][sogh_pairs_diffs_apizations.tar.xz], the final set of pairs used for the analysis, as examples of valid *APIzations*
 * [`sogh_pairs_diffs_different_semantic.tar.xz`][sogh_pairs_diffs_different_semantic.tar.xz], the pairs where the *StackOverflow* snippets were included into more complex methods
 * [`sogh_pairs_diffs_tests.tar.xz`][sogh_pairs_diffs_tests.tar.xz], not valid pairs because they are test cases
 * [`sogh_pairs_diffs_false_positives.tar.xz`][sogh_pairs_diffs_false_positives.tar.xz], not valid examples of reuse
-
-
 
 ### 9. Patterns identification {#9}
 
@@ -129,7 +109,7 @@ We provide the results of such manual analysis in the files [`parameters_pattern
 We were able to extract the common patterns then used in our automated approach called *APIzator*.
 In the provided file, we specify the pattern in the column `applied_pattern`.
 
-Once we defined the patterns, which can be considered as kind of rules to apply in specific snippets situations, we tried to manually apply these patterns to the same examples used for observations.
+Once we defined the patterns, which can be considered as a kind of rules to apply in specific snippets situations, we tried to manually apply these patterns to the same examples used for observations.
 We indicated the pattern that would be applied by our approach in the column `expected_pattern`.
 
 The pattern classification is described in the following table.
@@ -146,20 +126,26 @@ Pattern | Type | Description
 *latest* | Return | The developer derived the return statement as the last assignment to a variable in the snippet.
 *syso* | Return | The developer transformed a print to the system output to the return statement.
 
-
 [gh_files.jsonl.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/gh_files.jsonl.xz
+
 [gh_files_cleaned.jsonl.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/gh_files_cleaned.jsonl.xz
 [question_ids.csv]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/question_ids.csv
 [answer_ids.csv]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/answer_ids.csv
+
 [so_answers.csv.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/so_answers.csv.xz
 [so_answers_to_questions.csv.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/so_answers_to_questions.csv.xz
+
 [ghso_files_answers.jsonl.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/ghso_files_answers.jsonl.xz
+
 [sogh_pairs_clones.json.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/sogh_pairs_clones.json.xz
+
 [sogh_pairs_clones_files.tar.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/sogh_pairs_clones_files.tar.xz
 [sogh_pairs_clones_diffs.tar.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/sogh_pairs_clones_diffs.tar.xz
+
 [sogh_pairs_diffs_apizations.tar.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/sogh_pairs_diffs_apizations.tar.xz
 [sogh_pairs_diffs_different_semantic.tar.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/sogh_pairs_diffs_different_semantic.tar.xz
 [sogh_pairs_diffs_tests.tar.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/sogh_pairs_diffs_tests.tar.xz
 [sogh_pairs_diffs_false_positives.tar.xz]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/sogh_pairs_diffs_false_positives.tar.xz
+
 [parameters_patterns_analysis.csv]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/parameters_patterns_analysis.csv
 [return_patterns_analysis.csv]: https://github.com/pasqualesalza/apization-temp-data/raw/master/study/return_patterns_analysis.csv

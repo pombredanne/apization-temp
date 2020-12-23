@@ -6,13 +6,13 @@ title: "Homepage"
 
 This documentation website refers to the replication package for the paper *APIzation: Generating Reusable APIs from StackOverflow Code Snippets*.
 We provide all the *APIzations* we produced with our tool.
-Also, we include the data we used in our study.
+Also, we include the data we used in our evaluation.
 
 The website is organized as follows:
 
-1. [Study on APIzations](study) contains all the data we used to conduct our investigatory study to understand how developers perform APIzations.
-2. [Evaluation of the approach](evaluation) includes everything regarded the evaluation part of our approach called **APIzator**, and also a [browsable section](/apizations) to compare the *APIzation* we generated with the ones produced from the human participants.
-3. [Search APIzations](search) provides a search engine for a sample of the *APIzations* we produced by using *APIzator*.
+1. [📊 Study on APIzations](study) contains all the data we used to conduct our investigatory study to understand how developers perform *APIzations*.
+2. [📝 Evaluation of the approach](evaluation) includes everything regarded the evaluation part of our approach called **APIzator**, and also a [browsable section](/apizations) to compare the *APIzations* we generated with the ones produced from the human participants.
+3. [🔍 Search APIzations](search) provides a search engine for a sample of the *APIzations* we produced by using *APIzator*.
 
 ## ©️ License
 
