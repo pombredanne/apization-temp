@@ -118,11 +118,14 @@ In total, we collected `9,901` *APIzations*, whose list is included in the file 
 ### 6. Evaluation with human *APIzations* {#6}
 
 We asked `20` human participants to perform a manual *APIzation*, `10` snippets each.
+The human participants received an executable script to help them to produce the APIs.
+The script instructions are shown in the section [script instructions](script).
+
 We randomly assigned the snippets from the [`evaluation_candidates.csv`][evaluation_candidates.csv] list.
 We release the produced *APIzations* in the file [`evaluation_human_apizations.tar.xz`][evaluation_human_apizations.tar.xz].
 The set of *APIzations* we compared in the evaluation is released in the file [`evaluation_apizator_apizations.tar.xz`][evaluation_apizator_apizations.tar.xz].
 
-Moreover, we release all the snippets, human' and our tool's *APIzations* in the form of browsable pages at the section [APIzations](/apizations).
+Moreover, we release all the snippets, human' and our tool's *APIzations* in the form of browsable pages at the section [comparison](comparison).
 
 [so_answers.jsonl.xz.part.000]: https://github.com/pasqualesalza/apization-temp-data/raw/master/evaluation/so_answers.jsonl.xz.part.000
 [so_answers.jsonl.xz.part.001]: https://github.com/pasqualesalza/apization-temp-data/raw/master/evaluation/so_answers.jsonl.xz.part.001
