@@ -90,7 +90,7 @@ A sample of the *APIzations* is available through our [search engine](/search), 
 
 For the evaluation of the approach, we asked human participants to apply the *APIzation* on a subset of the extracted snippets, to constitute the oracle for our study.
 In our evaluation study, we compare the automatic generated *APIzations* to those of the oracle.
-We release all the snippets, human' and our tool's *APIzations* in the form of browsable pages at the section [APIzations](/apizations).
+We release all the snippets, human' and our tool's *APIzations* in the form of browsable pages at the section [comparison](comparison).
 
 ## Process
 
