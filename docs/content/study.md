@@ -73,7 +73,7 @@ We converted all the *StackOverflow* possible answer texts into code snippets.
 For each links between a method and possible snippets, we created the pairs of `(snippet, method)`.
 We also filtered out those snippets with less lines of code than `6`.
 
-Finally, we detected the *type 3* code clones between snippet and method with a `70 %` matching threshold.
+Finally, we detected the *type 3* code clones between snippet and method with a `70%` matching threshold.
 We saved the results in the [`sogh_pairs_clones.json.xz`][sogh_pairs_clones.json.xz] file.
 
 ### 7. Data preparation for manual evaluation {#7}

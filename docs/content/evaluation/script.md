@@ -64,7 +64,7 @@ Press Enter key to continue...
 
 
  ATTENTION 
-Try to not alter the semantic of the code snippet. For instance, if a snippet is reading the from the keyboard, do not transform it into a method that use a parameter instead.
+Try to not alter the semantic of the code snippet.
 If the stackoverflow code snippet declares the main method, you should perform the APIzation on the main and keep unaltered all the other method declarations (if any)
 
 
