@@ -19,7 +19,8 @@ menu:
       weight: 3
 
 params:
-  author: "Pasquale Salza"
+  # author: "Pasquale Salza"
+  author: "Anonymous"
   customCss:
     - custom.css
   style: light-without-switcher

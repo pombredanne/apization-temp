@@ -75,7 +75,7 @@ Press Enter key to continue...
 
 Please do the APIzation for the following stackoverflow code snippet
 http://www.stackoverflow.com/a/10095840
-open file /Users/valerio/sw/apify.experiment/src/main/java/soapify/Post10095840.java
+open file /Users/jondoe/sw/apify.experiment/src/main/java/soapify/Post10095840.java
 Go to src/main/java/soapify you should found the above Java class file
 copy and paste the code snippet from stackoverflow into this Java file and manually perform the APIzation
 make sure that the Java file compiles without errors

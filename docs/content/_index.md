@@ -21,6 +21,10 @@ Please see the [license page](license) for full details.
 
 ## 🖊️ Credits
 
+> The paper is under submission for a scientific conference. Due to the double-blind reviewing requirement, we hide all the references to the authors.
+
+<!--
 [Valerio Terragni](mailto:valerio.terragni@usi.ch) – USI Università della Svizzera italiana, Switzerland
 
 [Pasquale Salza](mailto:salza@ifi.uzh.ch) – University of Zurich, Switzerland
+-->
