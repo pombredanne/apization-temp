@@ -4,7 +4,7 @@
     </div>
 
     <h1 class="post-title">{{ i18n .Title }}</h1>
-    {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+    {{ $pages := where .RegularPages "Section" .Section }}
     {{ range $pages }}
         <div class="post-short-list">
             <header class="post-header"> 
