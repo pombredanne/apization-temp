@@ -105,22 +105,18 @@ We manually evaluated and classified all the pairs:
 
 We manually analyzed the content of the *APIzations* to identify possible patterns.
 We followed a coding process inspired by *grounded theory*.
-We provide the results of such manual analysis in the files [`parameters_patterns_coding.csv`][parameters_patterns_coding.csv] and [`return_patterns_coding.csv`][return_patterns_coding.csv], for the parameter and return statements transformations, respectively.
+The list of codes is described in the following table.
+
+Type | Code
+--- | ---
+Parameter | Undeclared variable
+Parameter | The variable has a constant value
+Return | The variable is the latest statement in the code snippet
+Return | The variable is used as an argument in a `System.out.println` invocation
+
 At the end of the coding process, we were able to extract the common patterns then used in our automated approach called *APIzator*.
-
-In the provided files, we specify the agreed pattern in the column `applied_pattern`.
-
-The pattern classification is described in the following table.
-
-Pattern | Type | Description
---- | --- | ---
-*custom* | Parameter | The developer applied a transformation by using an arbitrary action we were not able to generalize.
-*notdecl* | Parameter | The developer created a parameter from a variable that is only used, but not declared, in the code snippet.
-*const* | Parameter | The developer transformed a variable with a hard-coded assignment to a parameter.
-*already* | Return | The return statement is already declared in the snippet and was not changed by the developer.
-*custom* | Return | The developer indicated a return value by using an arbitrary action we were not able to generalize.
-*latest* | Return | The developer derived the return statement as the last assignment to a variable in the snippet.
-*syso* | Return | The developer transformed a print to the system output to the return statement.
+We provide the results of such manual analysis in the files [`parameters_patterns_coding.csv`][parameters_patterns_coding.csv] and [`return_patterns_coding.csv`][return_patterns_coding.csv], for the parameter and return statements transformations, respectively.
+In the provided files, we specify the agreed pattern in the column `code`.
 
 ### 10. Manual application of the patterns {#10}
 
@@ -128,22 +124,22 @@ As the final step in our study, we tried to manually apply these patterns to the
 This is intended to simulate how our automated approach called *APIzator* would behave.
 We provide the results of such manual analysis in the files [`parameters_patterns_analysis.csv`][parameters_patterns_analysis.csv] and [`return_patterns_analysis.csv`][return_patterns_analysis.csv], for the parameter and return statements transformations, respectively.
 
-In the provided file, we specified the applied pattern in the column `human_pattern`.
-We indicated the pattern that would be applied by our approach in the column `apizator_pattern`.
+In the provided file, we specified the applied pattern in the column `human_classification`.
+We indicated the pattern that would be applied by our approach in the column `apizator_classification`.
 
 The pattern classification is described in the following table.
 
-Pattern | Type | Description
+Classification | Type | Description
 --- | --- | ---
 *none* | Parameter | The developer did not convert the variable to a parameter.
 *custom* | Parameter | The developer applied a transformation by using an arbitrary action we were not able to generalize.
-*notdecl* | Parameter | The developer created a parameter from a variable that is only used, but not declared, in the code snippet.
-*const* | Parameter | The developer transformed a variable with a hard-coded assignment to a parameter.
+*PATT-notdecl* | Parameter | The developer created a parameter from a variable that is only used, but not declared, in the code snippet.
+*PATT-const* | Parameter | The developer transformed a variable with a hard-coded assignment to a parameter.
 *none* | Return | There are no return statements in the resulting API.
 *already* | Return | The return statement is already declared in the snippet and was not changed by the developer.
 *custom* | Return | The developer indicated a return value by using an arbitrary action we were not able to generalize.
-*latest* | Return | The developer derived the return statement as the last assignment to a variable in the snippet.
-*syso* | Return | The developer transformed a print to the system output to the return statement.
+*PATT-latest* | Return | The developer derived the return statement as the last assignment to a variable in the snippet.
+*PATT-syso* | Return | The developer transformed a print to the system output to the return statement.
 
 [gh_files.jsonl.xz]: https://github.com/blind-papers/apization-temp-data/raw/main/study/gh_files.jsonl.xz
 
