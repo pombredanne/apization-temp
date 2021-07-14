@@ -107,6 +107,7 @@ We manually analyzed the content of the *APIzations* to identify possible patter
 We followed a coding process inspired by *grounded theory*.
 We provide the results of such manual analysis in the files [`parameters_patterns_coding.csv`][parameters_patterns_coding.csv] and [`return_patterns_coding.csv`][return_patterns_coding.csv], for the parameter and return statements transformations, respectively.
 At the end of the coding process, we were able to extract the common patterns then used in our automated approach called *APIzator*.
+
 In the provided files, we specify the agreed pattern in the column `applied_pattern`.
 
 The pattern classification is described in the following table.
