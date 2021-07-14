@@ -25,8 +25,9 @@ Step | Description | Files | Questions | Answers | Methods | Snippets | Pairs | 
 [5](#5) | Combine *GitHub* files and *StackOverflow* answers | `27,940` | `13,300` | `63,123` | – | – | – | [`ghso_files_answers.jsonl.xz`][ghso_files_answers.jsonl.xz]
 [6](#6) | *Type 3* clone detection | `330` | – | `199` | `330` | `199` | `330` | [`sogh_pairs_clones.json.xz`][sogh_pairs_clones.json.xz]
 [7](#7) | Data preparation for manual evaluation | – | – | – | – | – | – | [`sogh_pairs_clones_files.tar.xz`][sogh_pairs_clones_files.tar.xz] <br /> [`sogh_pairs_clones_diffs.tar.xz`][sogh_pairs_clones_diffs.tar.xz]
-[8](#8) | Manual check | – | – | – | `135` | `85` | `135` | [`sogh_pairs_diffs_apizations.tar.xz`][sogh_pairs_diffs_apizations.tar.xz] <br /> [`sogh_pairs_diffs_different_semantic.tar.xz`][sogh_pairs_diffs_different_semantic.tar.xz] <br /> [`sogh_pairs_diffs_tests.tar.xz`][sogh_pairs_diffs_tests.tar.xz] <br /> [`sogh_pairs_diffs_false_positives.tar.xz`][sogh_pairs_diffs_false_positives.tar.xz]
-[9](#9) | Patterns identification | – | – | – | – | – | `135` | [`parameters_patterns_analysis.csv`][parameters_patterns_analysis.csv] <br /> [`return_patterns_analysis.csv`][return_patterns_analysis.csv]
+[8](#8) | Manual selection of APIs | – | – | – | `135` | `85` | `135` | [`sogh_pairs_diffs_apizations.tar.xz`][sogh_pairs_diffs_apizations.tar.xz] <br /> [`sogh_pairs_diffs_different_semantic.tar.xz`][sogh_pairs_diffs_different_semantic.tar.xz] <br /> [`sogh_pairs_diffs_tests.tar.xz`][sogh_pairs_diffs_tests.tar.xz] <br /> [`sogh_pairs_diffs_false_positives.tar.xz`][sogh_pairs_diffs_false_positives.tar.xz]
+[9](#9) | Coding patterns | – | – | – | – | – | `135` | [`parameters_patterns_coding.csv`][parameters_patterns_coding.csv] <br /> [`return_patterns_coding.csv`][return_patterns_coding.csv]
+[10](#10) | Manual application of the patterns | – | – | – | – | – | `135` | [`parameters_patterns_analysis.csv`][parameters_patterns_analysis.csv] <br /> [`return_patterns_analysis.csv`][return_patterns_analysis.csv]
 
 </div>
 
@@ -90,7 +91,7 @@ Then, we created the HTML files, visually showing the differences between the sn
 
 We saved all the files into a compressed file [`sogh_pairs_clones_diffs.tar.xz`][sogh_pairs_clones_diffs.tar.xz].
 
-### 8. Manual check {#8}
+### 8. Manual selection of APIs {#8}
 
 We pruned the pairs due to spurious code clones, those snippets that were included into a larger *GitHub* method.
 We manually evaluated and classified all the pairs:
@@ -100,17 +101,34 @@ We manually evaluated and classified all the pairs:
 * [`sogh_pairs_diffs_tests.tar.xz`][sogh_pairs_diffs_tests.tar.xz], not valid pairs because they are test cases
 * [`sogh_pairs_diffs_false_positives.tar.xz`][sogh_pairs_diffs_false_positives.tar.xz], not valid examples of reuse
 
-### 9. Patterns identification {#9}
+### 9. Coding patterns {#9}
 
-As the final step in our study, we analyzed the content of the *APIzations* to identify possible patterns.
-First, we analyzed how the developers applied the *APIzation* operations for all the variables in the snippets.
-Second, we studied how they produced a return statement starting from the snippet.
+We manually analyzed the content of the *APIzations* to identify possible patterns.
+We followed a coding process inspired by *grounded theory*.
+We provide the results of such manual analysis in the files [`parameters_patterns_coding.csv`][parameters_patterns_coding.csv] and [`return_patterns_coding.csv`][return_patterns_coding.csv], for the parameter and return statements transformations, respectively.
+At the end of the coding process, we were able to extract the common patterns then used in our automated approach called *APIzator*.
+In the provided files, we specify the agreed pattern in the column `applied_pattern`.
+
+The pattern classification is described in the following table.
+
+Pattern | Type | Description
+--- | --- | ---
+*custom* | Parameter | The developer applied a transformation by using an arbitrary action we were not able to generalize.
+*notdecl* | Parameter | The developer created a parameter from a variable that is only used, but not declared, in the code snippet.
+*const* | Parameter | The developer transformed a variable with a hard-coded assignment to a parameter.
+*already* | Return | The return statement is already declared in the snippet and was not changed by the developer.
+*custom* | Return | The developer indicated a return value by using an arbitrary action we were not able to generalize.
+*latest* | Return | The developer derived the return statement as the last assignment to a variable in the snippet.
+*syso* | Return | The developer transformed a print to the system output to the return statement.
+
+### 10. Manual application of the patterns {#10}
+
+As the final step in our study, we tried to manually apply these patterns to the same examples used for observations.
+This is intended to simulate how our automated approach called *APIzator* would behave.
 We provide the results of such manual analysis in the files [`parameters_patterns_analysis.csv`][parameters_patterns_analysis.csv] and [`return_patterns_analysis.csv`][return_patterns_analysis.csv], for the parameter and return statements transformations, respectively.
-We were able to extract the common patterns then used in our automated approach called *APIzator*.
-In the provided file, we specify the pattern in the column `applied_pattern`.
 
-Once we defined the patterns, which can be considered as a kind of rules to apply in specific snippets situations, we tried to manually apply these patterns to the same examples used for observations.
-We indicated the pattern that would be applied by our approach in the column `expected_pattern`.
+In the provided file, we specified the applied pattern in the column `human_pattern`.
+We indicated the pattern that would be applied by our approach in the column `apizator_pattern`.
 
 The pattern classification is described in the following table.
 
@@ -146,6 +164,9 @@ Pattern | Type | Description
 [sogh_pairs_diffs_different_semantic.tar.xz]: https://github.com/blind-papers/apization-temp-data/raw/main/study/sogh_pairs_diffs_different_semantic.tar.xz
 [sogh_pairs_diffs_tests.tar.xz]: https://github.com/blind-papers/apization-temp-data/raw/main/study/sogh_pairs_diffs_tests.tar.xz
 [sogh_pairs_diffs_false_positives.tar.xz]: https://github.com/blind-papers/apization-temp-data/raw/main/study/sogh_pairs_diffs_false_positives.tar.xz
+
+[parameters_patterns_coding.csv]: https://github.com/blind-papers/apization-temp-data/raw/main/study/parameters_patterns_coding.csv
+[return_patterns_coding.csv]: https://github.com/blind-papers/apization-temp-data/raw/main/study/return_patterns_coding.csv
 
 [parameters_patterns_analysis.csv]: https://github.com/blind-papers/apization-temp-data/raw/main/study/parameters_patterns_analysis.csv
 [return_patterns_analysis.csv]: https://github.com/blind-papers/apization-temp-data/raw/main/study/return_patterns_analysis.csv
