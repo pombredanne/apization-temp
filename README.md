@@ -1,4 +1,4 @@
-# APIzation
+# APIzation: Generating Reusable APIs from StackOverflow Code Snippets
 
 [![DOI](https://zenodo.org/badge/276175723.svg)](https://zenodo.org/badge/latestdoi/276175723)
 [![CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by/4.0/)
