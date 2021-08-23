@@ -3,8 +3,6 @@
 [![DOI](https://zenodo.org/badge/276175723.svg)](https://zenodo.org/badge/latestdoi/276175723)
 [![CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by/4.0/)
 
-## Replication package
-
 This repository represents the replication package for the paper:
 
 > **APIzation: Generating Reusable APIs from StackOverflow Code Snippets**
@@ -16,7 +14,7 @@ The paper is published in the proceeding of the *36th IEEE/ACM International Con
 In this replication package, we provide all the *APIzations* we produced with our tool.
 Also, we include the data we used for our evaluation.
 
-## Organization :open_file_folder:
+## :open_file_folder: Organization
 
 The repository is organized as follows:
 
@@ -26,7 +24,7 @@ The repository is organized as follows:
   * [`search/`](search/) provides the *Java* source files for the search engine we produced by using *APIzator*. Refer to the website for a demo
 * [`docs/`](docs/) contains the source code for the website where we documented our experiments
 
-## How to cite this dataset :books:
+## :books: How to cite this dataset
 
 If you would like to cite the dataset, please use the following `BibTeX` snippet:
 
@@ -39,12 +37,12 @@ If you would like to cite the dataset, please use the following `BibTeX` snippet
 }
 ```
 
-## License :balance_scale:
+## :balance_scale: License
 
 This replication package is licensed under the terms of the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
 Please see the [LICENSE](LICENSE) file for full details.
 
-## Credits :pray:
+## :pray: Credits
 
 * [Valerio Terragni](mailto:valerio.terragni@usi.ch) – University of Auckland, New Zealand
 * [Pasquale Salza](mailto:salza@ifi.uzh.ch) – University of Zurich, Switzerland
