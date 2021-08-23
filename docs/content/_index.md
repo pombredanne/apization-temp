@@ -21,12 +21,12 @@ The website is organized as follows:
 2. [📝 Evaluation of the approach](evaluation) includes everything regarded the evaluation part of our approach called **APIzator**, and also a [browsable section](evaluation/comparison) to compare the *APIzations* we generated with the ones produced from the human participants.
 3. [🔍 Search APIzations](search) provides a search engine for a sample of the *APIzations* we produced by using *APIzator*.
 
-## ©️ License
+## ⚖ License
 
 This replication package is licensed under the terms of the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
 Please see the [license page](license) for full details.
 
-## 🖊️ Credits
+## 🙏 Credits
 
 * [Valerio Terragni](mailto:valerio.terragni@usi.ch) – University of Auckland, New Zealand
 * [Pasquale Salza](mailto:salza@ifi.uzh.ch) – University of Zurich, Switzerland

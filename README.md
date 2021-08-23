@@ -16,7 +16,7 @@ The paper is published in the proceeding of the *36th IEEE/ACM International Con
 In this replication package, we provide all the *APIzations* we produced with our tool.
 Also, we include the data we used for our evaluation.
 
-## Materials included
+## Organization :open_file_folder:
 
 The repository is organized as follows:
 
@@ -26,7 +26,7 @@ The repository is organized as follows:
   * [`search/`](search/) provides the *Java* source files for the search engine we produced by using *APIzator*. Refer to the website for a demo
 * [`docs/`](docs/) contains the source code for the website where we documented our experiments
 
-## How to cite this dataset
+## How to cite this dataset :books:
 
 If you would like to cite the dataset, please use the following `BibTeX` snippet:
 
@@ -39,12 +39,12 @@ If you would like to cite the dataset, please use the following `BibTeX` snippet
 }
 ```
 
-## License
+## License :balance_scale:
 
 This replication package is licensed under the terms of the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
 Please see the [LICENSE](LICENSE) file for full details.
 
-## Credits
+## Credits :pray:
 
 * [Valerio Terragni](mailto:valerio.terragni@usi.ch) – University of Auckland, New Zealand
 * [Pasquale Salza](mailto:salza@ifi.uzh.ch) – University of Zurich, Switzerland
