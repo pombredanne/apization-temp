@@ -23,6 +23,7 @@ preferred-citation:
       given-names: "Salza"
       orcid: "https://orcid.org/0000-0002-8687-052X"
   title: "APIzation: Generating Reusable APIs from StackOverflow Code Snippets"
-  journal: "IEEE/ACM International Conference on Automated Software Engineering (ASE)"
+  conference:
+    name: "IEEE/ACM International Conference on Automated Software Engineering (ASE)"
   month: 11
   year: 2021
