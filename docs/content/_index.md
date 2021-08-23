@@ -4,9 +4,16 @@ title: "Homepage"
 
 # 🏠 Homepage
 
-This documentation website refers to the replication package for the paper *APIzation: Generating Reusable APIs from StackOverflow Code Snippets*.
-We provide all the *APIzations* we produced with our tool.
-Also, we include the data we used in our evaluation.
+This documentation website refers to the replication package for the paper:
+
+> **APIzation: Generating Reusable APIs from StackOverflow Code Snippets**
+>
+> Developer forums like StackOverflow have become essential resources to modern software development practices. However, many code snippets lack a well-defined method declaration, and thus they are often incomplete for immediate reuse. Developers must adapt the retrieved code snippets by parameterizing the variables involved and identifying the return value. This activity, which we call APIzation of a code snippet, can be tedious and time-consuming. In this paper, we present APIzator to perform APIzations of Java code snippets automatically. APIzator is grounded by four common patterns that we extracted by studying real APIzations in GitHub. APIzator presents a static analysis algorithm that automatically extracts the method parameters and return statements. We evaluated APIzator with a ground-truth of 200 APIzations collected from 20 developers. For 113 (56.50 %) and 115 (57.50 %) APIzations, APIzator and the developers extracted identical parameters and return statements, respectively. For 163 (81.50 %) APIzations, either the parameters or the return statements were identical.
+
+The paper is published in the proceeding of the *36th IEEE/ACM International Conference on Automated Software Engineering (ASE)*.
+
+In this replication package, we provide all the *APIzations* we produced with our tool.
+Also, we include the data we used for our evaluation.
 
 The website is organized as follows:
 
@@ -21,10 +28,5 @@ Please see the [license page](license) for full details.
 
 ## 🖊️ Credits
 
-> The paper is under submission for a scientific conference. Due to the double-blind reviewing requirement, we hide all the references to the authors.
-
-<!--
-[Valerio Terragni](mailto:valerio.terragni@usi.ch) – USI Università della Svizzera italiana, Switzerland
-
-[Pasquale Salza](mailto:salza@ifi.uzh.ch) – University of Zurich, Switzerland
--->
+* [Valerio Terragni](mailto:valerio.terragni@usi.ch) – University of Auckland, New Zealand
+* [Pasquale Salza](mailto:salza@ifi.uzh.ch) – University of Zurich, Switzerland

@@ -6,14 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Pasquale Salza",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.12",
-    "gulp": "^4.0.2"
-  },
-  "dependencies": {
     "del": "^6.0.0",
+    "gulp": "^4.0.2",
     "lunr": "^2.3.9"
   }
 }

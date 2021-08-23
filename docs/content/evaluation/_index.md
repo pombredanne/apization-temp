@@ -127,26 +127,26 @@ The set of *APIzations* we compared in the evaluation is released in the file [`
 
 Moreover, we release all the snippets, human' and our tool's *APIzations* in the form of browsable pages at the section [comparison](comparison).
 
-[so_answers.jsonl.xz.part.000]: https://github.com/blind-papers/apization-temp-data/raw/main/evaluation/so_answers.jsonl.xz.part.000
-[so_answers.jsonl.xz.part.001]: https://github.com/blind-papers/apization-temp-data/raw/main/evaluation/so_answers.jsonl.xz.part.001
-[so_answers.jsonl.xz.part.002]: https://github.com/blind-papers/apization-temp-data/raw/main/evaluation/so_answers.jsonl.xz.part.002
-[so_answers.jsonl.xz.part.003]: https://github.com/blind-papers/apization-temp-data/raw/main/evaluation/so_answers.jsonl.xz.part.003
-[so_questions.jsonl.xz.part.000]: https://github.com/blind-papers/apization-temp-data/raw/main/evaluation/so_questions.jsonl.xz.part.000
-[so_questions.jsonl.xz.part.001]: https://github.com/blind-papers/apization-temp-data/raw/main/evaluation/so_questions.jsonl.xz.part.001
-[so_questions.jsonl.xz.part.002]: https://github.com/blind-papers/apization-temp-data/raw/main/evaluation/so_questions.jsonl.xz.part.002
-[so_questions.jsonl.xz.part.003]: https://github.com/blind-papers/apization-temp-data/raw/main/evaluation/so_questions.jsonl.xz.part.003
+[so_answers.jsonl.xz.part.000]: https://github.com/pasqualesalza/apization-temp/raw/main/data/evaluation/so_answers.jsonl.xz.part.000
+[so_answers.jsonl.xz.part.001]: https://github.com/pasqualesalza/apization-temp/raw/main/data/evaluation/so_answers.jsonl.xz.part.001
+[so_answers.jsonl.xz.part.002]: https://github.com/pasqualesalza/apization-temp/raw/main/data/evaluation/so_answers.jsonl.xz.part.002
+[so_answers.jsonl.xz.part.003]: https://github.com/pasqualesalza/apization-temp/raw/main/data/evaluation/so_answers.jsonl.xz.part.003
+[so_questions.jsonl.xz.part.000]: https://github.com/pasqualesalza/apization-temp/raw/main/data/evaluation/so_questions.jsonl.xz.part.000
+[so_questions.jsonl.xz.part.001]: https://github.com/pasqualesalza/apization-temp/raw/main/data/evaluation/so_questions.jsonl.xz.part.001
+[so_questions.jsonl.xz.part.002]: https://github.com/pasqualesalza/apization-temp/raw/main/data/evaluation/so_questions.jsonl.xz.part.002
+[so_questions.jsonl.xz.part.003]: https://github.com/pasqualesalza/apization-temp/raw/main/data/evaluation/so_questions.jsonl.xz.part.003
 
-[compilable_snippets.tar.xz]: https://github.com/blind-papers/apization-temp-data/raw/main/evaluation/compilable_snippets.tar.xz
+[compilable_snippets.tar.xz]: https://github.com/pasqualesalza/apization-temp/raw/main/data/evaluation/compilable_snippets.tar.xz
 
-[external_libraries_jars.tar.xz.part.000]: https://github.com/blind-papers/apization-temp-data/raw/main/evaluation/external_libraries_jars.tar.xz.part.000
-[external_libraries_jars.tar.xz.part.001]: https://github.com/blind-papers/apization-temp-data/raw/main/evaluation/external_libraries_jars.tar.xz.part.001
-[external_libraries_jars.tar.xz.part.002]: https://github.com/blind-papers/apization-temp-data/raw/main/evaluation/external_libraries_jars.tar.xz.part.002
-[external_libraries_jars.tar.xz.part.003]: https://github.com/blind-papers/apization-temp-data/raw/main/evaluation/external_libraries_jars.tar.xz.part.003
-[external_libraries_jars.tar.xz.part.004]: https://github.com/blind-papers/apization-temp-data/raw/main/evaluation/external_libraries_jars.tar.xz.part.004
+[external_libraries_jars.tar.xz.part.000]: https://github.com/pasqualesalza/apization-temp/raw/main/data/evaluation/external_libraries_jars.tar.xz.part.000
+[external_libraries_jars.tar.xz.part.001]: https://github.com/pasqualesalza/apization-temp/raw/main/data/evaluation/external_libraries_jars.tar.xz.part.001
+[external_libraries_jars.tar.xz.part.002]: https://github.com/pasqualesalza/apization-temp/raw/main/data/evaluation/external_libraries_jars.tar.xz.part.002
+[external_libraries_jars.tar.xz.part.003]: https://github.com/pasqualesalza/apization-temp/raw/main/data/evaluation/external_libraries_jars.tar.xz.part.003
+[external_libraries_jars.tar.xz.part.004]: https://github.com/pasqualesalza/apization-temp/raw/main/data/evaluation/external_libraries_jars.tar.xz.part.004
 
-[apizations.tar.xz]: https://github.com/blind-papers/apization-temp-data/raw/main/evaluation/apizations.tar.xz
+[apizations.tar.xz]: https://github.com/pasqualesalza/apization-temp/raw/main/data/evaluation/apizations.tar.xz
 
-[evaluation_candidates.csv]: https://github.com/blind-papers/apization-temp-data/raw/main/evaluation/evaluation_candidates.csv
+[evaluation_candidates.csv]: https://github.com/pasqualesalza/apization-temp/raw/main/data/evaluation/evaluation_candidates.csv
 
-[evaluation_human_apizations.tar.xz]: https://github.com/blind-papers/apization-temp-data/raw/main/evaluation/evaluation_human_apizations.tar.xz
-[evaluation_apizator_apizations.tar.xz]: https://github.com/blind-papers/apization-temp-data/raw/main/evaluation/evaluation_apizator_apizations.tar.xz
+[evaluation_human_apizations.tar.xz]: https://github.com/pasqualesalza/apization-temp/raw/main/data/evaluation/evaluation_human_apizations.tar.xz
+[evaluation_apizator_apizations.tar.xz]: https://github.com/pasqualesalza/apization-temp/raw/main/data/evaluation/evaluation_apizator_apizations.tar.xz
